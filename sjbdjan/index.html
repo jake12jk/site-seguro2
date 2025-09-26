@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Seguros</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Seguros</h1>
+    <button id="toggle-theme" class="button">Alterar Tema</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="ativo">🏠 Início</a></li>
+      <li><a href="sobre.html">ℹ Sobre</a></li>
+      <li><a href="contato.html">📞 Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Seção de matérias -->
+    <section id="materias-section">
+      <h2>Matérias</h2>
+
+      <!-- Barra de busca -->
+      <input type="text" id="buscaMaterias" placeholder="Buscar matéria...">
+
+      <!-- Filtros por categoria -->
+      <div class="categoria-botoes">
+        <button data-cat-materia="todos" class="active">Todos</button>
+        <button data-cat-materia="Finanças">Finanças</button>
+        <button data-cat-materia="Seguros">Seguros</button>
+        <button data-cat-materia="Vida">Vida</button>
+        <button data-cat-materia="Viagem">Viagem</button>
+        <button data-cat-materia="Residencial">Residencial</button>
+      </div>
+
+      <!-- Container onde os cards serão renderizados pelo JS -->
+      <div id="materias" class="grid"></div>
+    </section>
+
+    <!-- Seção de produtos/preços -->
+    <section class="produtos">
+      <h2>Preços de Seguros</h2>
+      <div class="filtros">
+        <input type="text" id="busca" placeholder="Buscar por título...">
+
+        <div class="categoria-botoes">
+          <button data-cat="" class="active">Todas</button>
+          <button data-cat="Veículo">Veículo</button>
+          <button data-cat="Casa">Casa</button>
+          <button data-cat="Viagem">Viagem</button>
+        </div>
+
+        <select id="ordenar-preco">
+          <option value="">Ordenar por preço</option>
+          <option value="asc">Preço: Menor → Maior</option>
+          <option value="desc">Preço: Maior → Menor</option>
+        </select>
+      </div>
+
+      <div id="container">
+        <!-- Cards de produtos serão gerados pelo JS -->
+      </div>
+    </section>
+
+    <!-- TO-DO LIST -->
+    <section class="todo">
+      <h2>Minhas Tarefas</h2>
+      <div class="todo-inputs">
+        <input type="text" id="todo-input" placeholder="Digite uma nova tarefa...">
+        <button id="add-todo" class="button">Adicionar</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </section>
+
+  </main>
+
+  <!-- ====== FAQ ====== -->
+  <section class="faq-section">
+    <h2>Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">O que é seguro auto?</button>
+      <div class="faq-answer" hidden>
+        O seguro auto protege seu veículo contra acidentes, roubo e danos a terceiros.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Como contratar um seguro residencial?</button>
+      <div class="faq-answer" hidden>
+        Você pode contratar online ou com um corretor, escolhendo as coberturas desejadas.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">O seguro viagem cobre quais situações?</button>
+      <div class="faq-answer" hidden>
+        Ele cobre despesas médicas, extravio de bagagem e cancelamento de voos.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Site de Seguros</p>
+  </footer>
+
+  <script src="../jv/app.js" defer></script>
+
+</body>
+
+</html>
